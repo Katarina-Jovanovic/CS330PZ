@@ -6,7 +6,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import rs.ac.metropolitan.cs330_pz.screens.AppViewModel
+import rs.ac.metropolitan.cs330_pz.ViewModeli.AppViewModel
 import rs.ac.metropolitan.cs330_pz.screens.HomeScreen
 import rs.ac.metropolitan.cs330_pz.screens.KontaktScreen
 import rs.ac.metropolitan.cs330_pz.screens.NarucivanjeScreen

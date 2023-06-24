@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Home
@@ -21,13 +22,13 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import rs.ac.metropolitan.cs330_pz.animacija.ImageSlider
 import rs.ac.metropolitan.cs330_pz.R
+import rs.ac.metropolitan.cs330_pz.ViewModeli.AppViewModel
 import rs.ac.metropolitan.cs330_pz.animacija.Bee
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -77,13 +78,20 @@ fun PocetniScreen(vm: AppViewModel, paddingValues: PaddingValues){
 
         ImageSlider(images = images)
 
-
-
-
-
     }
-    Box(modifier = Modifier.fillMaxSize().offset (x = (-16).dp, y = 16.dp).padding(10.dp,250.dp)){
+    Box(modifier = Modifier
+        .fillMaxSize()
+        .offset(x = (-16).dp, y = 16.dp)
+        .padding(10.dp, 250.dp)){
         Bee()
+        LazyColumn (modifier = Modifier.fillMaxWidth().padding(55.dp)){
+
+            var longText="\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod est ac justo pretium, vitae eleifend est convallis. Sed fringilla mauris id orci finibus interdum. Aliquam gravida laoreet eros non dignissim. In ac tincidunt lacus. Mauris tincidunt vulputate lacus, ac ultrices lectus faucibus vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed eu risus ac orci lobortis pulvinar. Vivamus eu quam vitae ligula bibendum aliquam. Ut hendrerit tellus eget lacinia iaculis. Aliquam interdum posuere lorem, id finibus elit accumsan ut. Sed sed ex lobortis, venenatis est vitae, fermentum leo. Morbi vitae pharetra urna. Nam vel mi nulla. Maecenas vel lectus augue.\"sgdahsudsadjsaidjsaiodhsaudzhsuaidhsauidhsoaiudhsaidhsuiadhasudhsuiahdsuadhsuaihdsuiadhusiahdusiahduisahdusiahduisahduisadhuisahduisahduisahduisahdusahdushduashdusahdusadhusadhusadhusadhsuahduisadhiasudhsiau"
+            item {
+                Text(text = longText)
+            }
+        }
+
     }
 }
 @Preview

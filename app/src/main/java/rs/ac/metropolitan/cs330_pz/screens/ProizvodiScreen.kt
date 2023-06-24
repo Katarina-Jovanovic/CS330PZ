@@ -21,6 +21,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import rs.ac.metropolitan.cs330_pz.ViewModeli.AppViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

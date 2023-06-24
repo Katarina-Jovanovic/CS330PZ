@@ -1,4 +1,4 @@
-package rs.ac.metropolitan.cs330_pz.screens
+package rs.ac.metropolitan.cs330_pz.ViewModeli
 
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel

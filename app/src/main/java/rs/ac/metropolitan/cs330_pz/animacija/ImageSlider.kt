@@ -11,10 +11,12 @@ import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.Card
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.delay
+import rs.ac.metropolitan.cs330_pz.R
 
 @Composable
 fun ImageSlider(images: List<Int>) {
@@ -23,7 +25,14 @@ fun ImageSlider(images: List<Int>) {
     val coroutineScope = rememberCoroutineScope()
 
     Column(modifier = Modifier.fillMaxSize()) {
-        Box(modifier = Modifier.weight(1f).height(100.dp).fillMaxWidth().padding(16.dp)) {
+        Box(
+            modifier = Modifier
+                .weight(1f)
+                .height(100.dp)
+                .fillMaxWidth()
+                .padding(16.dp)
+        ) {
+
             // Scrollable Row of Cards
             LazyRow(
                 modifier = Modifier.fillMaxWidth(),
@@ -59,6 +68,7 @@ fun ImageSlider(images: List<Int>) {
         }
     }
 }
+
 
 
 
