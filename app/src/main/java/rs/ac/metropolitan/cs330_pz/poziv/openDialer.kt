@@ -33,9 +33,9 @@ fun openDialer() {
     val showDialog = remember { mutableStateOf(false) }
 
     Column {
-        Text(text = "Kontaktirajte nas")
+        Text(text = "Ukoliko vas nesto zanima: Kontaktirajte nas")
         Button(onClick = { showDialog.value = true }) {
-            Text(text = phoneNumber)
+            Text(text = "Call centar")
         }
     }
 

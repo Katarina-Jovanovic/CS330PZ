@@ -8,5 +8,9 @@ sealed class NavigationRoutes(val route: String) {
     object KontaktScreen:NavigationRoutes("kontakt")
     object NarucivanjeScreen:NavigationRoutes("narucivanje")
 
+    object PcelarListPage:NavigationRoutes("lista")
+
+    object PcelarDetailScreen:NavigationRoutes(route="detail/{elementId}")
+    fun createRoute(elementId: String) = "detail/$elementId"
 
 }
