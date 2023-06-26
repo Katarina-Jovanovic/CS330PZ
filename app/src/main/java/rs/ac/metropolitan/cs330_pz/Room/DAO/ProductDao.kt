@@ -9,21 +9,9 @@ import rs.ac.metropolitan.cs330_pz.Entiteti.Product
 
 @Dao
 interface ProductDao {
+    @Insert
+     fun insertProduct(product: Product)
 
     @Query("SELECT * FROM product")
-    fun getAllProducts(): List<Product>
-
-    @Query("SELECT * FROM product WHERE id = :productId")
-    fun getProductById(productId: Long): Product?
-
-    @Insert
-    fun insertProduct(product: Product)
-
-    @Update
-    fun updateProduct(product: Product)
-
-    @Delete
-    fun deleteProduct(product: Product)
-
-
+     fun getAllProducts(): List<Product>
 }

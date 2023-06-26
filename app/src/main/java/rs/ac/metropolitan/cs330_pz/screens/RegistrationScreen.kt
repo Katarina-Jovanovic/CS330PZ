@@ -113,9 +113,6 @@ fun RegistrationScreen(vm: AppViewModel, paddingValues: PaddingValues) {
 @Preview
 @Composable
 fun RegistrationPreview() {
-        val vm = AppViewModel()
-        RegistrationScreen(vm, PaddingValues(0.dp))
-    }
-
-
-
+    val vm = AppViewModel()
+    RegistrationScreen(vm, PaddingValues(0.dp))
+}

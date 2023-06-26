@@ -8,13 +8,9 @@ import rs.ac.metropolitan.cs330_pz.Entiteti.User
 
 @Dao
 interface UserDao {
-
     @Insert
-    fun insertUser(user: User)
+     fun insertUser(user: User)
 
-    @Query("SELECT * FROM user WHERE username=:username")
-    fun getUser(username:String): User?
-
-    @Query("SELECT * FROM user WHERE username = :username AND password = :password")
-    fun getUserByUsernameAndPassword(username: String, password: String): User?
+    @Query("SELECT * FROM users WHERE username = :username AND password = :password")
+     fun getUser(username: String, password: String): User?
 }

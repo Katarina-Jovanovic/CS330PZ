@@ -53,7 +53,7 @@ fun ProizvodiScreen(vm: AppViewModel, paddingValues: PaddingValues) {
                 }
             })
 
-        Text("Hello World")
+        Text("Proizvodi:")
 
     }
 
