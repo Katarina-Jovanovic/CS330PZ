@@ -56,11 +56,9 @@ fun PocetniScreen(vm: AppViewModel, paddingValues: PaddingValues){
                 IconButton(onClick = {vm.navigateToKontakt() }) {
                     Icon(Icons.Filled.Phone, "Kontakt")
                 }
-                IconButton(onClick = {vm.navigateToNarucivanje() }) {
-                    Icon(Icons.Filled.ShoppingCart, "Narucivanje")
-                }
+
                 IconButton(onClick = {vm.navigateToProizvodi() }) {
-                    Icon(Icons.Filled.Info, "Proizvodi")
+                    Icon(Icons.Filled.ShoppingCart, "Proizvodi")
                 }
             }
         )
